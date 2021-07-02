@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todoApp';
+  totalAngularPackages: any;
+  
+  constructor(private http: HttpClient) { }
+
+  getUsers() {
+    // Simple GET request with response type <any>
+    this.http.get('http://localhost:8080/customers').subscribe(data => {
+      this.totalAngularPackages = data;
+    })  
+  }
 }
