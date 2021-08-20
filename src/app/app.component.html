@@ -1,7 +1,15 @@
 <h1>Hello world</h1>
 
-<input type="text" class="myInput">
-
 <button (click)="getUsers()" class="myButton">Click me!</button>
+<ul>
+  <li *ngFor="let item of totalAngularPackages" class="returnDiv">{{item.firstName}} {{item.lastName}}</li>
+</ul>
+<!-- <div *ngFor=""class="returnDiv">{{totalAngularPackages | json | uppercase}}</div> -->
 
-<div class="returnDiv">{{totalAngularPackages | json | uppercase}}</div>
+<h1>This for retuning single users</h1>
+
+<input [(ngModel)]="id" type="text" class="myInput">
+
+<button (click)="getUser()" class="btn btn-primary myButton">Click me!</button>
+
+<div class="returnDiv">{{user | json | uppercase}}</div>

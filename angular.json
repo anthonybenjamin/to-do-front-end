@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "G:/Coding/Angular/toDoWell/to-do-front-end/node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
               "src/styles.css"
             ],
             "scripts": []
